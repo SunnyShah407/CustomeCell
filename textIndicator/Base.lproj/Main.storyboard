@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="textIndicator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qju-Dg-Uuv">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <animations/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L3M-3T-xld">
+                                    <size key="itemSize" width="138" height="123"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell_Image" id="4Wx-Dp-p0D" customClass="YNCollectionViewCell" customModule="textIndicator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="123"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="138" height="123"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="just text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Duo-el-YOM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="138" height="123"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="Duo-el-YOM" firstAttribute="top" secondItem="4Wx-Dp-p0D" secondAttribute="top" id="1wO-AT-nFJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Duo-el-YOM" secondAttribute="trailing" id="HEw-m2-I3v"/>
+                                            <constraint firstAttribute="bottom" secondItem="Duo-el-YOM" secondAttribute="bottom" id="UrP-fq-N2o"/>
+                                            <constraint firstItem="Duo-el-YOM" firstAttribute="leading" secondItem="4Wx-Dp-p0D" secondAttribute="leading" id="oRK-5r-Sqm"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="textView" destination="Duo-el-YOM" id="qSu-Bl-cEK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FZ3-g0-Yms"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bYr-Eb-dcm"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qju-Dg-Uuv" secondAttribute="bottom" id="Dd4-al-dDT"/>
+                            <constraint firstItem="qju-Dg-Uuv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KWb-dU-bR6"/>
+                            <constraint firstAttribute="trailing" secondItem="qju-Dg-Uuv" secondAttribute="trailing" id="REF-aW-Vk7"/>
+                            <constraint firstItem="qju-Dg-Uuv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="z5P-CZ-0Hw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collection" destination="qju-Dg-Uuv" id="3OM-sh-HqE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="420" y="278"/>
+        </scene>
+    </scenes>
+</document>
